@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AlgoViz Design System - Playful & Colorful Theme */
+
+@layer base {
+  :root {
+    --background: 240 20% 98%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 94%;
+    --muted-foreground: 240 5% 46%;
+
+    --accent: 326 78% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 1rem;
+
+    /* Algorithm category colors */
+    --sorting: 262 83% 58%;
+    --searching: 199 89% 48%;
+    --graph: 142 71% 45%;
+    --tree: 38 92% 50%;
+    --dp: 326 78% 60%;
+
+    /* Visualization colors */
+    --viz-comparing: 38 92% 50%;
+    --viz-swapping: 326 78% 60%;
+    --viz-sorted: 142 71% 45%;
+    --viz-pivot: 262 83% 58%;
+    --viz-current: 199 89% 48%;
+    --viz-visited: 142 71% 45%;
+    --viz-path: 262 83% 58%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 326 78% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 262 83% 65%;
+
+    /* Algorithm category colors - dark mode */
+    --sorting: 262 83% 65%;
+    --searching: 199 89% 55%;
+    --graph: 142 71% 50%;
+    --tree: 38 92% 55%;
+    --dp: 326 78% 65%;
+
+    /* Visualization colors - dark mode */
+    --viz-comparing: 38 92% 55%;
+    --viz-swapping: 326 78% 65%;
+    --viz-sorted: 142 71% 50%;
+    --viz-pivot: 262 83% 65%;
+    --viz-current: 199 89% 55%;
+    --viz-visited: 142 71% 50%;
+    --viz-path: 262 83% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-sorting {
+    @apply bg-gradient-to-br from-purple-500 to-indigo-600;
+  }
+  
+  .gradient-searching {
+    @apply bg-gradient-to-br from-cyan-500 to-blue-600;
+  }
+  
+  .gradient-graph {
+    @apply bg-gradient-to-br from-emerald-500 to-teal-600;
+  }
+  
+  .gradient-tree {
+    @apply bg-gradient-to-br from-amber-500 to-orange-600;
+  }
+  
+  .gradient-dp {
+    @apply bg-gradient-to-br from-pink-500 to-rose-600;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+}
